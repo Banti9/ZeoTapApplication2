@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Weather Monitoring System</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="libs/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Chart.js for visualizations -->
+    <script src="libs/chart.min.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <div class="container my-auto">
+        <header class="text-center my-4">
+            <h1>Real-Time Weather Monitoring</h1>
+        </header>
+
+        <!-- Search Section -->
+        <div class="row justify-content-center my-4">
+            <div class="col-md-8">
+                <div class="input-group">
+                    <input type="text" id="search-input" class="form-control" placeholder="Enter city name" aria-label="City name">
+                    <button class="btn btn-primary" id="search-btn">Search</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h2>Current Weather</h2>
+                <div id="weather-data" class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Weather in <span id="city-name"></span></h5>
+                        <img id="weather-icon" src="" alt="Weather Icon" class="my-2">
+                        <p class="card-text">Temperature: <span id="temp"></span> °C</p>
+                        <p class="card-text">Feels Like: <span id="feels-like"></span> °C</p>
+                        <p class="card-text">Condition: <span id="main-condition"></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h2>Alerts</h2>
+                <div id="alerts" class="card text-center">
+                    <div class="card-body">
+                        <ul id="alert-list"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-4 justify-content-center">
+            <div class="col-md-12">
+                <h2>Daily Weather Summary</h2>
+                <canvas id="summaryChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="libs/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="libs/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

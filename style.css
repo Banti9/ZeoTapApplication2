@@ -1,0 +1,21 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    margin: 10px 0;
+}
+
+h1, h2 {
+    color: #343a40;
+}
+
+#alert-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#alert-list li {
+    color: red;
+}
